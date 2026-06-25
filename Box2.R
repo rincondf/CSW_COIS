@@ -129,7 +129,7 @@ text(162, test_dyn80@probabilities[7], paste(round(test_dyn80@probabilities[7], 
 text(162, test_dyn110@probabilities[7], paste(round(test_dyn110@probabilities[7], digits = 2)),
      cex = 1.8)
 
-arrows((which.min(SPLCanA) + 49), 1, (which.min(SPLCanA) + 49), -0.01, 
+arrows((which.min(SPLCanA) + 49), 1, (which.min(SPLCanA) + 49), -0.03, 
        col = "gold4", lwd = 2, length = 0.1, xpd = NA)
 
 mtext("B", side = 3, cex = 2, at = 60, line = 1)
