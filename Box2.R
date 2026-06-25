@@ -108,25 +108,28 @@ mtext("A", side = 3, cex = 2, at = -45, line = 1)
 
 par(mar = c(5, 7, 1, 2))
 plot(c(78, 80, 85, 100, 117, 141, 155), test_dyn80@probabilities, lwd = 2, type = "o", ylim = c(0, 1), 
-     cex.axis = 2, yaxt = "n", xaxt = "n", xlim = c(75, 165),
+     cex.axis = 2, yaxt = "n", xaxt = "n", xlim = c(75, 170),
      xlab = "Cabbage seedpod weevil degree days", cex.lab = 2, ylab = "")
 
 mtext("Probability of N > EIL", side = 2, cex = 2, line = 4.3)
 axis(side = 2, at = seq(0, 1, 0.2), cex.axis = 2, las = 2)
-axis(side = 1, at = seq(80, 155, 10), labels = seq(80, 155, 10), cex.axis = 2)
+axis(side = 1, at = seq(80, 175, 10), labels = seq(80, 175, 10), cex.axis = 2)
 
 points(c(78, 80, 85, 100, 117, 141, 155), test_dyn40@probabilities, lwd = 2, lty = 2, type = "o")
 points(c(78, 80, 85, 100, 117, 141, 155), test_dyn110@probabilities, lwd = 2, lty = 3, type = "o")
 
 points(78, 0.5, lwd = 2, pch = 17, cex = 2)
 
-text(159, test_dyn40@probabilities[7] + 0.01, paste(round(test_dyn40@probabilities[7], digits = 1)),
-     cex = 2)
+text(160, test_dyn40@probabilities[7] + 0.02, paste(round(test_dyn40@probabilities[7], digits = 1)),
+     cex = 1.8)
 
 text(162, test_dyn80@probabilities[7], paste(round(test_dyn80@probabilities[7], digits = 2)),
-     cex = 2)
+     cex = 1.8)
 
 text(162, test_dyn110@probabilities[7], paste(round(test_dyn110@probabilities[7], digits = 2)),
-     cex = 2)
+     cex = 1.8)
+
+arrows((which.min(SPLCanA) + 49), 1, (which.min(SPLCanA) + 49), -0.01, 
+       col = "gold4", lwd = 2, length = 0.1, xpd = NA)
 
 mtext("B", side = 3, cex = 2, at = 60, line = 1)
