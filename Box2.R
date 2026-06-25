@@ -120,7 +120,7 @@ points(c(78, 80, 85, 100, 117, 141, 155), test_dyn110@probabilities, lwd = 2, lt
 
 points(78, 0.5, lwd = 2, pch = 17, cex = 2)
 
-text(158, test_dyn40@probabilities[7], paste(round(test_dyn40@probabilities[7], digits = 1)),
+text(159, test_dyn40@probabilities[7] + 0.01, paste(round(test_dyn40@probabilities[7], digits = 1)),
      cex = 2)
 
 text(162, test_dyn80@probabilities[7], paste(round(test_dyn80@probabilities[7], digits = 2)),
