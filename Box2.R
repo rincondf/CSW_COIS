@@ -81,7 +81,7 @@ test_dyn110 <- stbp_composite(data = count110,
 
 par(mfrow = c(2, 1))
 
-par(mar = c(3, 7, 2, 2))
+par(mar = c(3, 7, 3, 2))
 plot(seq(15, 350), ref_traj(seq(15, 350)), 
      xlim = c(10, 350), cex.axis = 2, yaxt = "n", type = "l",
      lwd = 2, xlab = "", cex.lab = 2, ylab = "", ylim = c(0, 35),
@@ -104,8 +104,9 @@ points(c(80, 85, 100, 117, 141, 155), colMeans(count80), lwd = 2, type = "o")
 points(c(80, 85, 100, 117, 141, 155), colMeans(count40), lwd = 2, type = "o", lty = 2)
 points(c(80, 85, 100, 117, 141, 155), colMeans(count110), lwd = 2, type = "o", lty = 3)
 
+mtext("A", side = 3, cex = 2, at = -45, line = 1)
 
-par(mar = c(5, 7, 0, 2))
+par(mar = c(5, 7, 1, 2))
 plot(c(78, 80, 85, 100, 117, 141, 155), test_dyn80@probabilities, lwd = 2, type = "o", ylim = c(0, 1), 
      cex.axis = 2, yaxt = "n", xaxt = "n", xlim = c(75, 165),
      xlab = "Cabbage seedpod weevil degree days", cex.lab = 2, ylab = "")
@@ -127,3 +128,5 @@ text(162, test_dyn80@probabilities[7], paste(round(test_dyn80@probabilities[7], 
 
 text(162, test_dyn110@probabilities[7], paste(round(test_dyn110@probabilities[7], digits = 2)),
      cex = 2)
+
+mtext("B", side = 3, cex = 2, at = 60, line = 1)
