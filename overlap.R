@@ -256,6 +256,77 @@ abline(v = which.min(SPLCanB) + 49, lty = 2)
 
 
 
+################
+
+
+
+
+
+
+sam_canola <- function(th) {
+  
+  
+  t <- 1
+  
+  pop <- rep(NA, length(t))
+  
+  dama <- rep(NA, length(t))
+  dama[1] <- 0
+  
+  dama1 <- rep(NA, length(t))
+  dama1[1] <- 0
+  
+  while(t < 350) {
+    
+    pop[t] <- weevils[t]
+    
+    dama[t+1] <- (pop[t] * 0.132) * can_pods[t]
+    dama1[t+1] <- dama1[t] + (dama[t+1] * (1 - (dama1[t] / 40)))
+    
+    if(pop[t] > th) {
+      apl <- t
+      ires = 50
+      
+      
+      while(t <= (apl + 3)) {
+        
+        pop[t] <- 30
+        
+        dama[t+1] <- (pop[t] * 0.132) * can_pods[t]
+        dama1[t+1] <- dama1[t] + (dama[t+1] * (1 - (dama1[t] / 40)))
+        
+        t <- t + 1
+      }
+      
+      
+      while((t <= (apl + ires)) & (t > (apl + 3))) {
+        
+        pop[t] <- weevils[t] * 0.01
+        
+        dama[t+1] <- (pop[t] * 0.132) * can_pods[t]
+        dama1[t+1] <- dama1[t] + (dama[t+1] * (1 - (dama1[t] / 40)))
+        
+        t <- t + 1
+      }
+      
+      t <- t - 1
+    }
+    
+    t <- t + 1
+  }
+  
+  
+  list(pop, dama1)
+  
+}
+
+plot(sam_canola(th = 30)[[1]], xlab = "Time (t, days)", 
+     ylab = "Pest density per plant", cex.lab = 2, type = "l", 
+     cex.axis = 2, lwd  = 2, xlim = c(0, 350))
+
+plot(sam_canola(th  = 30)[[2]], xlab = "Time (t, days)", 
+     ylab = "Damage", cex.lab = 2, type = "l", 
+     cex.axis = 2, lwd  = 2, xlim = c(0, 350))
 
 
 
