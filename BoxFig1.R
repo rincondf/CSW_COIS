@@ -12,7 +12,7 @@ plot(seq(200, 700), pgamma(seq(200, 700), shape = coef(mod_pods)[1],
      cex.axis = 2, lwd  = 2, xlim = c(200, 700), ylim = c(0, 1), yaxt = "n", xaxt = "n")
 
 
-mtext("A", side = 3, cex = 2, at = 165, line = 3)
+mtext("A", side = 3, cex = 2, at = 150, line = 3)
 
 mtext("Canola growing degree days", side = 1, cex = 2, line = 3, col = "darkgreen")
 axis(side = 1, at = seq(200, 700, 100), cex.axis = 2, col.axis = "darkgreen")
@@ -60,7 +60,7 @@ plot(seq(200, 700), pgamma(seq(200, 700), shape = coef(mod_pods)[1],
      cex.axis = 2, lwd  = 2, xlim = c(200, 700), ylim = c(0, 1), yaxt = "n", xaxt = "n")
 
 
-mtext("C", side = 3, cex = 2, at = 165, line = 3)
+mtext("C", side = 3, cex = 2, at = 150, line = 3)
 
 mtext("Canola growing degree days", side = 1, cex = 2, line = 3, col = "darkgreen")
 axis(side = 1, at = seq(200, 700, 100), cex.axis = 2, col.axis = "darkgreen")
