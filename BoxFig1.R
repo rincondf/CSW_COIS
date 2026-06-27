@@ -113,7 +113,7 @@ plot(f, SPLCanA, xlab = "",
 mtext("B", side = 3, cex = 2, at = 15, line = 3)
 
 axis(side = 2, at = seq(0, 40, 10), cex.axis = 2, las = 1)
-title(ylab = "Cumulative yield loss (%)", cex.lab = 2, line = 4.5)
+title(ylab = "Accumulated yield loss (%)", cex.lab = 2, line = 4.5)
 
 mtext("Canola growing degree days", side = 1, cex = 2, line = 3, col = "darkgreen")
 axis(side = 1, at = seq(50, 400, 70), labels = seq(200, 700, 100), cex.axis = 2, col.axis = "darkgreen")
@@ -125,12 +125,6 @@ mtext("Cabbage seedpod weevil degree days", side = 3, cex = 2, line = 3, col = "
 abline(h = SPLCanA[which.min(SPLCanA)], lty = 2)
 
 abline(v = which.min(SPLCanA) + 49, lty = 2)
-
-
-
-
-
-
 
 
 
