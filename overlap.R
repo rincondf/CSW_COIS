@@ -53,8 +53,8 @@ axis(side = 2, at = seq(0, 0.55, 0.1), cex.axis = 2, las = 2)
 Cancol <- t_col("darkgreen", percent = 40)
 CSWcol <- t_col("brown", percent = 40)
 
-App1col <- t_col("gold4", percent = 80)
-App2col <- t_col("blue3", percent = 80)
+App1col <- t_col("gold4", percent = 70)
+App2col <- t_col("black", percent = 70)
 
 
 par(mar = c(4.5, 6, 6, 2))
@@ -290,7 +290,7 @@ sam_canola <- function(th) {
       
       while(t <= (apl + 3)) {
         
-        pop[t] <- 30
+        pop[t] <- weevils[t]
         
         dama[t+1] <- (pop[t] * 0.132) * can_pods[t]
         dama1[t+1] <- dama1[t] + (dama[t+1] * (1 - (dama1[t] / 40)))
@@ -327,6 +327,8 @@ plot(sam_canola(th = 30)[[1]], xlab = "Time (t, days)",
 plot(sam_canola(th  = 30)[[2]], xlab = "Time (t, days)", 
      ylab = "Damage", cex.lab = 2, type = "l", 
      cex.axis = 2, lwd  = 2, xlim = c(0, 350))
+
+which(sam_canola(th = 30)[[1]] > 29)
 
 
 
