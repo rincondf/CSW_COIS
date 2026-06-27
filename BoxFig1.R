@@ -50,7 +50,7 @@ arrows((which.min(SPLCanA) + 49), 1.04, (which.min(SPLCanA) + 49), -0.04,
 
 
 
-# B
+# C
 
 par(mar = c(5, 6, 6, 6))
 
@@ -60,7 +60,7 @@ plot(seq(200, 700), pgamma(seq(200, 700), shape = coef(mod_pods)[1],
      cex.axis = 2, lwd  = 2, xlim = c(200, 700), ylim = c(0, 1), yaxt = "n", xaxt = "n")
 
 
-mtext("B", side = 3, cex = 2, at = 165, line = 3)
+mtext("C", side = 3, cex = 2, at = 165, line = 3)
 
 mtext("Canola growing degree days", side = 1, cex = 2, line = 3, col = "darkgreen")
 axis(side = 1, at = seq(200, 700, 100), cex.axis = 2, col.axis = "darkgreen")
@@ -102,7 +102,7 @@ arrows(130+50, 90, 130+50, 82, lwd = 2, length = 0.1, col = "gold4")
 
 
 
-# C
+# B
 
 par(mar = c(5, 7, 7, 4))
 plot(f, SPLCanA, xlab = "", 
@@ -110,7 +110,7 @@ plot(f, SPLCanA, xlab = "",
      cex.axis = 2, lwd  = 2, xlim = c(50, 400), ylim = c(0, 40), yaxt = "n",
      xaxt = "n")
 
-mtext("C", side = 3, cex = 2, at = 15, line = 3)
+mtext("B", side = 3, cex = 2, at = 15, line = 3)
 
 axis(side = 2, at = seq(0, 40, 10), cex.axis = 2, las = 1)
 title(ylab = "Cumulative yield loss (%)", cex.lab = 2, line = 4.5)
@@ -151,7 +151,7 @@ plot(seq(50, 399), sam_canola(th  = 30)[[2]], xlab = "",
      cex.axis = 2, lwd  = 2, xlim = c(50, 400), ylim = c(0, 25), yaxt = "n",
      xaxt = "n")
 
-mtext("C", side = 3, cex = 2, at = 15, line = 3)
+mtext("D", side = 3, cex = 2, at = 15, line = 3)
 
 polygon(c(seq(50, 399), 399), c(sam_canola(th  = 30)[[2]], 0), col = App2col, border = NA)
 
@@ -166,3 +166,7 @@ axis(side = 3, at = seq(50, 400, 50), cex.axis = 2, col.axis = "brown")
 mtext("Cabbage seedpod weevil degree days", side = 3, cex = 2, line = 3, col = "brown")
 
 abline(h = sam_canola(th  = 30)[[2]][350], lty = 2)
+
+
+arrows(78+50, 6, 78+50, 3, lwd = 2, length = 0.1, col = "gold4")
+arrows(130+50, 7, 130+50, 4, lwd = 2, length = 0.1, col = "gold4")
