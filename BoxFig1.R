@@ -81,13 +81,13 @@ plot(seq(50, 398), sam_canola(th = 30)[[1]],
      xaxt = "n")
 
 axis(side = 3, at = seq(50, 400, 50), cex.axis = 2, col.axis = "brown")
-axis(side = 2, at = seq(0, 100, 20), cex.axis = 2, col.axis = "brown")
+axis(side = 2, at = seq(0, 100, 20), cex.axis = 2, col.axis = "brown", las = 1)
 polygon(seq(50, 398), sam_canola(th = 30)[[1]], col = CSWcol, border = NA)
 
 abline(h = 30, lty = 3, lwd = 2, col = "grey40")
 
 mtext("Cabbage seedpod weevil degree days", side = 3, cex = 2, line = 3, col = "brown")
-mtext("Population density", side = 2, cex = 2, line = 3.5, col = "brown")
+mtext("Population density", side = 2, cex = 2, line = 4, col = "brown")
 
 arrows(78+50, 47, 78+50, 39, lwd = 2, length = 0.1, col = "gold4")
 arrows(130+50, 90, 130+50, 82, lwd = 2, length = 0.1, col = "gold4")
