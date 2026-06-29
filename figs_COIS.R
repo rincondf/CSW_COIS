@@ -1,3 +1,11 @@
+# FIGURES 1 AND 2
+
+
+# FIGURE 1
+
+
+# Fast-growing pest population function
+
 sam_th100 <- function(t, th) {
   
   res = 0
@@ -34,6 +42,7 @@ sam_th100 <- function(t, th) {
 }
 
 
+# Slow-growing pest population function
 
 sam_th100_A <- function(t, th) {
   
@@ -72,6 +81,7 @@ sam_th100_A <- function(t, th) {
 
 
 
+# Pest population constantly close to the EIL
 
 sam_th100_B <- function(t, th) {
   
@@ -118,14 +128,7 @@ sam_th100_B <- function(t, th) {
 
 
 
-
-
-
-
-
-
-
-
+# FIGURE
 
 
 par(mfrow = c(3, 2), oma = c(2, 4, 2, 2))
@@ -220,10 +223,12 @@ title(main = "F", xpd = NA, cex.main = 2, adj = 0, line = 1)
 
 mtext("Pest population", side = 2, outer = TRUE, cex = 2)
 
-#mtext("Cumulative damage", side = 2, outer = TRUE, cex = 2, line = -42, xpd = NA)
+#############
+
+# FIGURE 2
 
 
-
+# Necessary functions
 
 log3 <- function(x){
   0.568/(1+exp(-1*(x-56)))
@@ -234,6 +239,8 @@ log2 <- function(x){
   0.82/(1+exp(-0.4*(x-38.7)))
 }
 
+
+# FIGURE
 
 par(mfrow = c(2, 1))
 
